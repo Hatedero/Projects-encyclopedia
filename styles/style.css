@@ -1,0 +1,454 @@
+:root {
+    --parchment: #f4e4bc;
+    --parchment-dark: #e2cf9f;
+    --ink: #2c1e14;
+    --gold: #b8860b;
+    --gold-bright: #ffd700;
+    --crimson: #800000;
+    --border-style: 4px double var(--ink);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a120b;
+    background-image: radial-gradient(#2c1e14 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.nav-links a {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.scroll-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--parchment);
+    padding: 60px;
+    position: relative;
+    box-shadow: var(--shadow);
+    border: 20px solid transparent;
+    border-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png') 30 stretch;
+    min-height: 100vh;
+}
+
+.scroll-container::before,
+.scroll-container::after {
+    content: '✧';
+    position: absolute;
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.scroll-container::before {
+    top: 10px;
+    left: 10px;
+}
+
+.scroll-container::after {
+    bottom: 10px;
+    right: 10px;
+}
+
+nav {
+    border-bottom: var(--border-style);
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--crimson);
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+    text-shadow: 0 0 5px rgba(184, 134, 11, 0.5);
+}
+
+#hero {
+    text-align: center;
+    padding: 40px 0 80px;
+    border-bottom: 1px solid rgba(44, 30, 20, 0.2);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: var(--crimson);
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.hero-subtitle {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 30px;
+}
+
+.seal {
+    width: 100px;
+    height: 100px;
+    background: var(--crimson);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--parchment);
+    font-size: 3rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--gold);
+    user-select: none;
+}
+
+#quests {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--ink);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: var(--gold);
+    margin: 10px auto;
+}
+
+.quest-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.quest-card {
+    border: 1px solid rgba(44, 30, 20, 0.3);
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.quest-card:hover {
+    transform: scale(1.02);
+    background: var(--parchment-dark);
+    border-color: var(--gold);
+}
+
+.quest-card h3 {
+    color: var(--crimson);
+    margin-bottom: 10px;
+}
+
+.quest-status {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 0.8rem;
+    color: green;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* The Message Raven (Contact) */
+#contact {
+    padding: 60px 0;
+    background: rgba(44, 30, 20, 0.05);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom-color: var(--crimson);
+}
+
+.btn-scroll {
+    background: var(--crimson);
+    color: white;
+    border: 2px solid var(--gold);
+    padding: 12px 30px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.btn-scroll:hover {
+    background: #a00000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+}
+
+footer {
+    margin-top: 80px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+    padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .scroll-container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .quest-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a120b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border: 3px solid #1a120b;
+    border-radius: 10px;
+}
+
+:root {
+            --parchment: #f4e4bc;
+            --parchment-dark: #e2cf9f;
+            --ink: #2c1e14;
+            --gold: #b8860b;
+            --crimson: #800000;
+            --shadow: 0 10px 30px rgba(0,0,0,0.5);
+            --transition: all 0.3s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a120b;
+            background-image: radial-gradient(#2c1e14 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: var(--ink);
+            font-family: 'EB Garamond', serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            overflow-x: hidden;
+        }
+
+        .scroll-container {
+            max-width: 850px;
+            width: 100%;
+            background: var(--parchment);
+            padding: 60px;
+            position: relative;
+            box-shadow: var(--shadow);
+            border: 20px solid transparent;
+            border-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png') 30 stretch;
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+        }
+
+        .scroll-container::before, .scroll-container::after {
+            content: '✧';
+            position: absolute;
+            font-size: 2rem;
+            color: var(--gold);
+            z-index: 5;
+        }
+        .scroll-container::before { top: 10px; left: 10px; }
+        .scroll-container::after { bottom: 10px; right: 10px; }
+
+        #quest-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .quest-card {
+            border: 1px solid rgba(44, 30, 20, 0.2);
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            border-left: 5px solid var(--crimson);
+        }
+
+        .quest-card:hover {
+            transform: translateX(10px);
+            background: var(--parchment-dark);
+            border-color: var(--gold);
+            box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .quest-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+
+        .quest-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--crimson);
+            text-transform: uppercase;
+        }
+
+        .quest-status {
+            font-family: 'MedievalSharp', cursive;
+            font-size: 0.9rem;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .quest-summary {
+            font-size: 1.25rem;
+            line-height: 1.4;
+            font-style: italic;
+            color: var(--ink);
+        }
+
+        #focus-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            padding: 20px;
+        }
+
+        .focus-content {
+            background: var(--parchment);
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+            max-width: 650px;
+            width: 100%;
+            padding: 50px;
+            border: 8px double var(--ink);
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--crimson);
+            cursor: pointer;
+        }
+
+        .focus-body {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            margin: 25px 0;
+            padding: 20px 0;
+            border-top: 1px solid var(--gold);
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .focus-footer {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            color: var(--gold);
+        }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #1a120b; }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border: 2px solid #1a120b; }
+
+        @media (max-width: 600px) {
+            .scroll-container { padding: 30px 15px; }
+            .quest-header { flex-direction: column; }
+            .quest-title { font-size: 1.4rem; }
+            .focus-content { padding: 30px; }
+        }

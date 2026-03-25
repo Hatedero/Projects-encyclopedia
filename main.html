@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles | Portfolio</title>
+    <link href="./styles/style.css" rel="stylesheet" />
+    <script src="./scripts/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scroll-container">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="./main.html">The Origin</a></li>
+                <li><a href="./questboard.html">The Deeds</a></li>
+                <li><a href="#contact">Send Raven</a></li>
+            </ul>
+        </nav>
+
+        <section id="hero">
+            <div class="seal">⚔</div>
+            <h1 class="hero-title">Your Name</h1>
+            <p class="hero-subtitle">Grand Architect of the Digital Realm</p>
+            <p>Master of the Arcane Scripts (JavaScript) and Weaver of Visual Enchantments (CSS). I have traversed many kingdoms to master the art of building portals that withstand the test of time.</p>
+            <a href="#quests" class="btn-scroll">Behold my deeds</a>
+        </section>
+
+        <section id="quests">
+            <h2 class="section-title">Notable Quests</h2>
+            <div class="quest-grid">
+                <div class="quest-card">
+                    <span class="quest-status">Complete</span>
+                    <h3>The Great Inventory</h3>
+                    <p>A marketplace enchantment allowing merchants from across the realm to trade rare artifacts securely.</p>
+                    <p style="font-size: 0.8rem; margin-top: 10px; color: var(--gold);">Tags: Commerce, Magic UI</p>
+                </div>
+
+                <div class="quest-card">
+                    <span class="quest-status">Ongoing</span>
+                    <h3>Dragon-Eye Analytics</h3>
+                    <p>A scrying glass tool that visualizes the movement of gold and resources across the continent in real-time.</p>
+                    <p style="font-size: 0.8rem; margin-top: 10px; color: var(--gold);">Tags: Alchemy, Visualization</p>
+                </div>
+
+                <div class="quest-card">
+                    <span class="quest-status">Complete</span>
+                    <h3>Scroll of Whispers</h3>
+                    <p>A secure messaging raven system that encrypts scrolls so only the intended recipient can read the contents.</p>
+                    <p style="font-size: 0.8rem; margin-top: 10px; color: var(--gold);">Tags: Security, Stealth</p>
+                </div>
+
+                <div class="quest-card">
+                    <span class="quest-status">Available</span>
+                    <h3>Your Next Venture?</h3>
+                    <p>I am currently seeking a new fellowship. If you have a noble cause that requires digital smithing, seek me out below.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Dispatch a Messenger</h2>
+            <form id="quest-form">
+                <div class="field">
+                    <label>Your House Name</label>
+                    <input type="text" placeholder="e.g. House Stark" required>
+                </div>
+                <div class="field">
+                    <label>The Scroll for Reply</label>
+                    <input type="email" placeholder="messenger@kingdom.com" required>
+                </div>
+                <div class="field">
+                    <label>Thy Proposition</label>
+                    <textarea rows="4" placeholder="Speak thy mind, traveler..." required></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn-scroll">Seal and Send</button>
+                </div>
+            </form>
+            <p id="response-msg" style="text-align: center; margin-top: 20px; display: none; font-family: 'MedievalSharp'; color: var(--crimson);"></p>
+        </section>
+
+        <footer>
+            <p>Anno Domini <span id="year"></span> &bull; Forged in the fires of Code &bull; No Frameworks were harmed in this production.</p>
+        </footer>
+    </div>
+</body>
+</html>
