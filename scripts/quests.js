@@ -28,7 +28,7 @@ const myQuests = [
     }
 ];
 
-const maxQuestsToShow = ;
+const maxQuestsToShow = 3;
 
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById('quest-list');
