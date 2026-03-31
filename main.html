@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chronicles | Portfolio</title>
     <link href="./styles/style.css" rel="stylesheet" />
-    <script src="./scripts/script.js"></script>
+    <script defer src="./scripts/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,48 +23,72 @@
             <h1 class="hero-title">Amaury Menneret</h1>
             <p class="hero-subtitle">Développeur d'applications</p>
             <p>Étudiant en BUT3 Informatique</p>
+            <p>
+                Bonjour, je suis Amaury Menneret, un développeur junior encore en formation. J'ai pour le moment pu m'orienter vers le développement logiciel, avec des expériences en mobile(KMP, Flutter, Compose).
+                J'explore de nouvelles technologies dans mon temps libre, et fais de nouveaux projets pour explorer celles ci.
+                <br>
+                •
+                <br>
+                Les autres domaines qui me passionnent comportent les jeux vidéos, livres (tout particulièrement la fantasy et science fiction).
+                Occasionellement je fais de la course, escalade et calisthénie.
+                <br>
+                •
+                <br>
+                Lors de mon parcours j'ai eu l'occasion de me spécialiser dans le développement dès le lycée grâce à la STI2D SIN. J'avais auparavant déjà eu l'occasion de confirmer mes choix mais n'avait pas eu l'occasion de directement aller dans une filière faite pour l'informatique.
+            </p>
             <a href="#quests" class="btn-scroll">Mes projets</a>
         </section>
 
         <section id="quests">
             <h2 class="section-title">Projets dont je suis fier</h2>
-            <div class="quest-grid">
-                
-                <div class="quest-card">
-                    <span class="quest-status">Complete</span>
-                    <h3>Template</h3>
-                    <p>A marketplace enchantment allowing merchants from across the realm to trade rare artifacts securely.</p>
-                    <p style="font-size: 0.8rem; margin-top: 10px; color: var(--gold);">Tags: Commerce, Magic UI</p>
-                </div>
+            <div class="quest-grid" id="project-container">
+            </div>
+        </section>
 
+        <section id="skills">
+            <h2 class="section-title">Mes compétences</h2>
+            <div class="skill-grid">
+
+                <div class="skill-card">
+
+                </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2 class="section-title">Dispatch a Messenger</h2>
+            <h2 class="section-title">Me contacter</h2>
             <form id="quest-form">
                 <div class="field">
-                    <label>Your House Name</label>
-                    <input type="text" placeholder="e.g. House Stark" required>
+                    <label>Votre nom</label>
+                    <input type="text" placeholder="M/Mme. ..." required>
                 </div>
                 <div class="field">
-                    <label>The Scroll for Reply</label>
-                    <input type="email" placeholder="messenger@kingdom.com" required>
+                    <label>Votre contact</label>
+                    <input type="email" placeholder="contact@email.com" required>
                 </div>
                 <div class="field">
-                    <label>Thy Proposition</label>
-                    <textarea rows="4" placeholder="Speak thy mind, traveler..." required></textarea>
+                    <label>Votre message</label>
+                    <textarea class="message-me" rows="4" placeholder="Bonjour Amaury, ..." required></textarea>
                 </div>
-                <div style="text-align: center;">
-                    <button type="submit" class="btn-scroll">Seal and Send</button>
+                <div class="center-me">
+                    <button type="submit" class="btn-scroll">Envoyer</button>
                 </div>
             </form>
             <p id="response-msg" style="text-align: center; margin-top: 20px; display: none; font-family: 'MedievalSharp'; color: var(--crimson);"></p>
         </section>
 
         <footer>
-            <p>Anno Domini <span id="year"></span> &bull; Forged in the fires of Code &bull; No Frameworks were harmed in this production.</p>
+            <p>2026 <span id="year"></span> &bull; Projet portfolio &bull; HTML, CSS et JS pur</p>
         </footer>
+    </div>
+
+    <div id="quest-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            <p id="modal-details"></p>
+            <p id="modal-artifacts" style="font-weight: bold; margin-top: 20px; border-top: 1px solid #333; padding-top: 10px;"></p>
+        </div>
     </div>
 </body>
 </html>
