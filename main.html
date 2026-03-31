@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chronicles | Portfolio</title>
     <link href="./styles/style.css" rel="stylesheet" />
     <script defer src="./scripts/script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="scroll-container">
         <nav>
@@ -24,17 +28,22 @@
             <p class="hero-subtitle">Développeur d'applications</p>
             <p>Étudiant en BUT3 Informatique</p>
             <p>
-                Bonjour, je suis Amaury Menneret, un développeur junior encore en formation. J'ai pour le moment pu m'orienter vers le développement logiciel, avec des expériences en mobile(KMP, Flutter, Compose).
-                J'explore de nouvelles technologies dans mon temps libre, et fais de nouveaux projets pour explorer celles ci.
+                Bonjour, je suis Amaury Menneret, un développeur junior encore en formation. J'ai pour le moment pu
+                m'orienter vers le développement logiciel, avec des expériences en mobile(KMP, Flutter, Compose).
+                J'explore de nouvelles technologies dans mon temps libre, et fais de nouveaux projets pour explorer
+                celles ci.
                 <br>
                 •
                 <br>
-                Les autres domaines qui me passionnent comportent les jeux vidéos, livres (tout particulièrement la fantasy et science fiction).
+                Les autres domaines qui me passionnent comportent les jeux vidéos, livres (tout particulièrement la
+                fantasy et science fiction).
                 Occasionellement je fais de la course, escalade et calisthénie.
                 <br>
                 •
                 <br>
-                Lors de mon parcours j'ai eu l'occasion de me spécialiser dans le développement dès le lycée grâce à la STI2D SIN. J'avais auparavant déjà eu l'occasion de confirmer mes choix mais n'avait pas eu l'occasion de directement aller dans une filière faite pour l'informatique.
+                Lors de mon parcours j'ai eu l'occasion de me spécialiser dans le développement dès le lycée grâce à la
+                STI2D SIN. J'avais auparavant déjà eu l'occasion de confirmer mes choix mais n'avait pas eu l'occasion
+                de directement aller dans une filière faite pour l'informatique.
             </p>
             <a href="#quests" class="btn-scroll">Mes projets</a>
         </section>
@@ -47,11 +56,13 @@
 
         <section id="skills">
             <h2 class="section-title">Mes compétences</h2>
-            <div class="skill-grid">
-
-                <div class="skill-card">
-
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input type="text" id="skill-search" class="skill-search-input" placeholder="Rechercher un talent (ex: Flutter, Java...)" onkeyup="filterSkills()">
                 </div>
+            </div>
+            <p class="center-me"> niveaux : Débutant - Intermédiaire - Confirmé - Adpete </p>
+            <div class="skill-grid">
             </div>
         </section>
 
@@ -74,7 +85,9 @@
                     <button type="submit" class="btn-scroll">Envoyer</button>
                 </div>
             </form>
-            <p id="response-msg" style="text-align: center; margin-top: 20px; display: none; font-family: 'MedievalSharp'; color: var(--crimson);"></p>
+            <p id="response-msg"
+                style="text-align: center; margin-top: 20px; display: none; font-family: 'MedievalSharp'; color: var(--crimson);">
+            </p>
         </section>
 
         <footer>
@@ -87,8 +100,10 @@
             <span class="modal-close" onclick="closeModal()">&times;</span>
             <h2 id="modal-title">Project Title</h2>
             <p id="modal-details"></p>
-            <p id="modal-artifacts" style="font-weight: bold; margin-top: 20px; border-top: 1px solid #333; padding-top: 10px;"></p>
+            <p id="modal-artifacts"
+                style="font-weight: bold; margin-top: 20px; border-top: 1px solid #333; padding-top: 10px;"></p>
         </div>
     </div>
 </body>
+
 </html>
