@@ -132,6 +132,11 @@ function closeModal() {
     document.getElementById('quest-modal').style.display = 'none';
 }
 
+function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+}
+
 window.onload = () => {
     loadProjects();
     loadSkills();
@@ -139,6 +144,17 @@ window.onload = () => {
     
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const hamburger = document.getElementById('hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('active');
+        });
+    });
 };
 
 window.onclick = (event) => {
