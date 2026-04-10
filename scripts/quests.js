@@ -75,4 +75,21 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) closeOverlay();
     });
+
+    // Hamburger menu functionality
+    function toggleMenu() {
+        const nav = document.querySelector('.nav-links');
+        nav.classList.toggle('active');
+    }
+
+    const hamburger = document.getElementById('hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('active');
+        });
+    });
 });
