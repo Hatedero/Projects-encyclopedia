@@ -226,6 +226,9 @@ nav {
     cursor: pointer;
     transition: var(--transition);
     position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .quest-card:hover {
@@ -233,6 +236,61 @@ nav {
     background: var(--parchment-dark);
     border-color: var(--gold);
     box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quest-thumb {
+    width: 180px;
+    min-width: 180px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(44, 30, 20, 0.15);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.quest-card-body {
+    flex: 1;
+}
+
+.focus-body {
+    margin: 20px 0;
+    color: var(--ink);
+    line-height: 1.7;
+}
+
+.focus-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+
+.source-link {
+    color: var(--crimson);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--crimson);
+    transition: var(--transition);
+}
+
+.source-link:hover {
+    color: var(--gold);
+}
+
+.detail-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.detail-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(44, 30, 20, 0.15);
 }
 
 .quest-header {
@@ -427,6 +485,16 @@ textarea:focus {
 
     .nav-links li {
         margin: 10px 0;
+    }
+
+    .quest-card {
+        flex-direction: column;
+    }
+
+    .quest-thumb {
+        width: 100%;
+        min-width: auto;
+        height: 220px;
     }
 }
 
