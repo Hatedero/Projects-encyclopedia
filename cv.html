@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chronicles | Quest Log</title>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Portfolio Amaury Menneret</title>
     <link href="./styles/style.css" rel="stylesheet" />
-    <script src="./scripts/quests.js"></script>
+    <script defer src="./scripts/script.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
-<body>
 
+<body>
     <div class="scroll-container">
         <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
-                <li><a href="./main.html">The Origin</a></li>
-                <li><a href="./questboard.html">The Deeds</a></li>
-                <li><a href="#contact">Send Raven</a></li>
+                <li><a href="./main.html">Présentation</a></li>
+                <li><a href="./questboard.html">Mes projets</a></li>
+                <li><a href="./cv.html">Mon CV</a></li>
             </ul>
         </nav>
-        <main id="quest-list">
+        <main>
+            <section id="cv">
+                <h1 class="section-title">Mon CV</h1>
+                <p>Vous pouvez consulter mon CV en cliquant sur le lien ci-dessous :</p>
+                <a href="./cv_amaury.pdf" class="btn-download" target="_blank">Télécharger mon CV</a>
+            </section>
         </main>
-    </div>
-
-    <div id="focus-overlay" onclick="closeQuest()">
-        <article class="focus-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeQuest()">&times;</span>
-            <div id="focus-data">
-            </div>
-        </article>
     </div>
 </body>
 </html>

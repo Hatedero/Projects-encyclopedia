@@ -25,32 +25,71 @@ const myQuests = [
         details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the scroll, the ink disappears and the parchment turns to ash.",
         realm: "Security",
         artifacts: "Rust, WebSockets"
+    },
+    {
+        id: 4,
+        title: "Scroll of Whispers",
+        status: "Complete",
+        summary: "A secure messaging network that vanishes like smoke.",
+        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the scroll, the ink disappears and the parchment turns to ash.",
+        realm: "Security",
+        artifacts: "Rust, WebSockets"
+    },
+    {
+        id: 5,
+        title: "Scroll of Whispers",
+        status: "Complete",
+        summary: "A secure messaging network that vanishes like smoke.",
+        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the scroll, the ink disappears and the parchment turns to ash.",
+        realm: "Security",
+        artifacts: "Rust, WebSockets"
     }
 ];
-
-const maxQuestsToShow = 3;
 
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById('quest-list');
     const overlay = document.getElementById('focus-overlay');
     const focusData = document.getElementById('focus-data');
     const closeBtn = document.querySelector('.close-btn');
+    const searchInput = document.getElementById('project-search');
 
-    myQuests.slice(0, maxQuestsToShow).forEach(q => {
-        const card = document.createElement('article');
-        card.className = 'quest-card';
-        card.innerHTML = `
-            <span class="quest-status">${q.status}</span>
-            <h2 class="quest-title">${q.title}</h2>
-            <p>"${q.summary}"</p>
-        `;
-        
-        card.addEventListener('click', () => {
-            showDetails(q);
+    const renderQuests = (query = '') => {
+        container.innerHTML = '';
+        const normalizedQuery = query.trim().toLowerCase();
+
+        const filteredQuests = myQuests.filter(q => {
+            return [q.title, q.summary, q.realm, q.artifacts]
+                .some(value => value.toLowerCase().includes(normalizedQuery));
         });
 
-        container.appendChild(card);
-    });
+        const questsToShow = filteredQuests;
+
+        if (questsToShow.length === 0) {
+            const emptyState = document.createElement('p');
+            emptyState.textContent = 'Aucun projet trouvé.';
+            emptyState.style.color = '#2c1e14';
+            emptyState.style.fontStyle = 'italic';
+            emptyState.style.textAlign = 'center';
+            container.appendChild(emptyState);
+            return;
+        }
+
+        questsToShow.forEach(q => {
+            const card = document.createElement('article');
+            card.className = 'quest-card';
+            card.innerHTML = `
+                <span class="quest-status">${q.status}</span>
+                <h2 class="quest-title">${q.title}</h2>
+                <p>"${q.summary}"</p>
+            `;
+
+            card.addEventListener('click', () => {
+                showDetails(q);
+            });
+
+            container.appendChild(card);
+        });
+    };
 
     function showDetails(q) {
         focusData.innerHTML = `
@@ -65,6 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
+
+    searchInput.addEventListener('input', () => renderQuests(searchInput.value));
+    renderQuests();
 
     const closeOverlay = () => {
         overlay.style.display = 'none';

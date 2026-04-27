@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chronicles | Quest Log</title>
+    <title>Portfolio Amaury Menneret</title>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="./styles/style.css" rel="stylesheet" />
     <script src="./scripts/quests.js"></script>
@@ -12,13 +12,22 @@
 
     <div class="scroll-container">
         <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
-                <li><a href="./main.html">The Origin</a></li>
-                <li><a href="./questboard.html">The Deeds</a></li>
-                <li><a href="#contact">Send Raven</a></li>
+                <li><a href="./main.html">Présentation</a></li>
+                <li><a href="./questboard.html">Mes projets</a></li>
+                <li><a href="./cv.html">Mon CV</a></li>
             </ul>
         </nav>
-        <main id="quest-list">
+
+        <main>
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input id="project-search" type="search" placeholder="Rechercher un projet..." aria-label="Rechercher des projets" />
+                </div>
+            </div>
+
+            <section id="quest-list" class="quest-grid"></section>
         </main>
     </div>
 
