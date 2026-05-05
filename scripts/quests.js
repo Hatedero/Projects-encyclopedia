@@ -19,7 +19,7 @@ const myQuests = [
         title: "Warlocks",
         status: "Développement en pause",
         summary: "Un mod minecraft ajoutant des classes, objets légendaires et de nouvelles zones à explorer. ",
-        details: "By polishing the lenses of SVG and D3, I am creating a vision that allows the King to see every copper move. It translates raw numbers into constellations of data that any advisor can read.",
+        details: "Ce projet s'est inscrit dans mon apprentissage plus approfondi de la programmation. Il visait à étudier différents principes complexes que je pourrais retrouver plus tard et m'a permis de me pencher sur différents thèmes comme : <br>-la génération procédurale <br>-l'optimisation générale de mon code <br>-les interactions client/serveur <br>Cette expérience m'a permis de bien mieux m'approprier les premières connaissances que j'ai pu construire en cours, et mettre en place une organisation rigoureuse pour un projet de longue date.",
         realm: "Développement de jeu vidéo",
         artifacts: "Java",
         source: ["https://github.com/Hatedero/Warlocks-1.21", "https://github.com/Hatedero/Warlocks-1.20.1"],
@@ -33,7 +33,7 @@ const myQuests = [
         title: "Compendium",
         status: "En cours",
         summary: "Un mod minecraft ajoutant un système de magie complexe, et introduisant de nouvelles mécaniques de jeu comme des enchantements plus poussés.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Compendium est un mod minecraft développé dans le but d'être publié. Il ajoute un nouveau système de magie(authorité serveur), de nouveaux objets ainsi que des enchqntements s'accordant avec le système de magie. Fortement inspiré de Mahou tsukai et Jujutsu Kaisen, ce projet utilise la librarie Lodestone pour rajouter des effets visuels aux sorts. Originellement développé seul, il est cependant probable que ce projet devienne un projet en équipe.",
         realm: "Développement de jeu vidéo",
         artifacts: "Java",
         source: ["https://github.com/Hatedero/compendium"],
@@ -47,7 +47,7 @@ const myQuests = [
         title: "Cardracter",
         status: "Développement en pause",
         summary: "Une application mobile de gestion de fiches personnages, inspirée par les jeux de rôle sur table. Elle permet de créer, organiser et partager des fiches de personnages.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Cardracter est une application mobile développée dans le cadre d'un projet de cours. Elle permet de créer, organiser et partager des fiches de personnages pour les jeux de rôle sur table. L'application a été développée en utilisant Kotlin et Jetpack Compose pour l'interface utilisateur, Room pour la gestion de la base de données locale, Retrofit pour les appels réseau, et intègre des pratiques CI/CD pour faciliter le développement en équipe. On peut aussi y ajouter une API développée par le collègue avec qui j'étais en groupe. Des schémas de données complexes ont été développés pour cette application, permettant une personnalisation poussée des fiches de personnages. Plusieurs autres fonctionnalités sont à prévoir plus tard, comme l'arrivée de fiches d'objets, lieux, etc..",
         realm: "Développement mobile",
         artifacts: "Kotlin, Jetpack Compose, Room, Retrofit, CI/CD",
         source: ["https://github.com/Hatedero/cardracter"],
@@ -61,7 +61,7 @@ const myQuests = [
         title: "Cardracter Flutter",
         status: "Développement en pause",
         summary: "Une application mobile de gestion de fiches personnages, inspirée par les jeux de rôle sur table. Elle permet de créer, organiser et partager des fiches de personnages.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Cette application est une version alternative de Cardracter, développée en utilisant Flutter et Dart. Elle propose une interface utilisateur moderne et des fonctionnalités similaires. Elle utilise encore une fois la même API. Elle a cependant été réalisée en une vingtaine d'heures, dans un exercice de vitesse. De par ce fait, elle présente des fonctionnalités moins poussées, et des schémas de données moins complexes. Elle utilise cependant de nouvelles fonctionnalités de flutter, comme l'integration d'une action sur le swipe.",
         realm: "Développement mobile",
         artifacts: "Dart, Flutter, Retrofit",
         source: ["https://github.com/Hatedero/cardracter_flutter"],
@@ -75,7 +75,7 @@ const myQuests = [
         title: "Lock In",
         status: "Achevé",
         summary: "Une application mobile permettant de commander des verrous connectés(du même projet).",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Lock in est un projet concernant le milieu du développement mobile et embarqué. Il est divisé en deux parties : une application mobile, et un verrou connecté basé sur un esp32. L'application mobile utilise firebase pour l'authentication sécurisée des utilisateurs ainsi que la gestion des données via le firestore. Elle permet aux utilisateurs d'ajouter de nouveaux verrous sur l'application, modifier leurs informations, et les dé/verrouiller à distance. Le verrou connecté peut être débloqué soit via l'application mobile, soit via un mot de passe  défini par l'utilisateur. Le projet a été réalisé en équipe, et a permis de se familiariser avec les problématiques liées au développement mobile, à la sécurité des données, ainsi qu'aux systèmes embarqués.",
         realm: "Développement mobile",
         artifacts: "Kotlin, Jetpack Compose, Retrofit, Firebase",
         source: ["https://github.com/Hatedero/lockin"],
@@ -89,7 +89,7 @@ const myQuests = [
         title: "Obseadian",
         status: "Développement en pause",
         summary: "Une interface web sensée immiter Obsidian, permettant de créer, importer exporter et relier des notes facilement.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Obseadian est une interface web inspirée de Obsidian, conçue pour permettre la création, l'importation, l'exportation et le lien de notes de manière intuitive. Elle utilise des technologies simples pour pouvoir mieux prendre en main le projet et rester légère. L'interface permet de créer des notes en markdown à l'aide d'un pseudo parser, de créer des graphes de données à partir des liens entre les différentes notes. On y trouve aussi l'utilisation de docker pour facilement et rapidement la déployer.",
         realm: "Développement web",
         artifacts: "HTML, CSS, Typescript, Node.js, Docker",
         source: ["https://github.com/Hatedero/obseadian"],
@@ -294,7 +294,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === overlay) closeOverlay();
     });
 
-    // Hamburger menu functionality
     function toggleMenu() {
         const nav = document.querySelector('.nav-links');
         nav.classList.toggle('active');
