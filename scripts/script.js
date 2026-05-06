@@ -1,47 +1,31 @@
 const top_projects = [
     {
-        id: 1,
-        title: "Compendium",
-        status: "En cours - solo",
-        summary: "Un mod minecraft qui change la manière de jouer au jeu en ajoutant magie, donjons et d'autres nouveautés diverses.",
-        details: "Détails approfondis sur l'architecture du mod et l'intégration des fichiers JSON pour les recettes et les loot tables.",
-        realm: "Personnel - Jeu vidéo",
-        skills: "JAVA, data files(JSON)",
-        artifacts: "IntelliJ IDEA, Forge API"
+        title: "VRephi",
+        summary: "Une extension de Gephi-lite permettant de visualiser des graphes en réalité virtuelle, pour une meilleure immersion et compréhension des données.",
     },
     {
-        id: 2,
         title: "G.A.S.C",
-        status: "Participation Finie - en équipe",
         summary: "Une application mobile permettant aux professeurs et étudiants de Lyon 1 & 3 de gérer leurs activités sportives à l'université.",
-        details: "Collaboration sur la partie mobile et synchronisation avec le backend Symfony.",
-        realm: "Professionnel - Application Mobile",
-        skills: "KMP, Compose, SQLite, Symfony",
-        artifacts: "Android Studio, KMP Wizard"
     },
     {
-        id: 3,
-        title: "Godot Vampire Survivor",
-        status: "Fini - solo",
-        summary: "Un jeu vidéo fait en godot, qui imite le principe des vampires survivors en incluant de la génération procédurale et un rythme intense.",
-        details: "Gestion des shaders pour les hordes d'ennemis et optimisation des collisions.",
-        realm: "Cours - Jeu vidéo",
-        skills: "GDScript",
-        artifacts: "Godot Engine 4.x"
+        title: "Inhibitus",
+        summary: "Un serious game ayant pour but d'aider les professionnels de santé à réentrainer le mécanisme d'inhibition chez les patients souffrants d'addictions.",
     }
 ];
 
-const skills = [
-    { id: 1, title: "Kotlin", level: "Adepte", icon: "⚔️" },
-    { id: 2, title: "Flutter", level: "Intermédiaire", icon: "🛡️" },
-    { id: 3, title: "React", level: "Débutant", icon: "📜" },
-    { id: 4, title: "SQL", level: "Adepte", icon: "💎" },
-    { id: 5, title: "UI/UX", level: "Confirmé", icon: "✨" },
-    { id: 6, title: "Java", level: "Confirmé", icon: "☕" },
-    { id: 7, title: "Symfony", level: "Intermédiaire", icon: "🎻" },
-    { id: 8, title: "GDScript", level: "Intermédiaire", icon: "🎮" },
-    { id: 9, title: "SQLite", level: "Confirmé", icon: "🗄️" }
-];
+let skills = [];
+
+function initializeSkills() {
+    if (typeof getAllSkills === 'function') {
+        const allSkills = getAllSkills();
+        skills = allSkills.map((title, index) => ({
+            id: index + 1,
+            title: title,
+            level: "Intermédiaire",
+            icon: "📜"
+        }));
+    }
+}
 
 function loadProjects() {
     const container = document.getElementById('project-container');
@@ -51,13 +35,11 @@ function loadProjects() {
     top_projects.forEach(project => {
         const card = document.createElement('div');
         card.className = 'quest-card';
-        card.onclick = () => openModal(project.id);
+        card.onclick = () => openModal(project.title);
 
         card.innerHTML = `
-            <span class="quest-status">${project.status}</span>
             <h3>${project.title}</h3>
             <p>${project.summary}</p>
-            <p class="quest-tags">${project.realm} | Tech: ${project.skills}</p>
         `;
         container.appendChild(card);
     });
@@ -116,16 +98,8 @@ function initSearch() {
     }
 }
 
-function openModal(projectId) {
-    const project = top_projects.find(p => p.id === projectId);
-    if (!project) return;
-
-    document.getElementById('modal-title').textContent = project.title;
-    document.getElementById('modal-details').textContent = project.details;
-    document.getElementById('modal-artifacts').textContent = "Outils de forge : " + (project.artifacts || "Non spécifiés");
-
-    const modal = document.getElementById('quest-modal');
-    modal.style.display = 'flex';
+function openModal(projectTitle) {
+    window.location.href = `./questboard.html?project=${encodeURIComponent(projectTitle)}`;
 }
 
 function closeModal() {
@@ -138,6 +112,7 @@ function toggleMenu() {
 }
 
 window.onload = () => {
+    initializeSkills();
     loadProjects();
     loadSkills();
     initSearch();

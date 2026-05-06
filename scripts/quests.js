@@ -81,8 +81,11 @@ const myQuests = [
         source: ["https://github.com/Hatedero/lockin"],
         nbPeople: 2,
         context: "École",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/lockin_2.png",
         images: [
+            "./media/lockin_1.png",
+            "./media/lockin_2.png",
+            "./media/lockin_3.png"
         ]
     },
     {
@@ -103,7 +106,7 @@ const myQuests = [
         title: "Contrées du Lointain",
         status: "Achevé",
         summary: "Un jeu vidéo développé avec Godot, reprenant le concept d'un vampire survivor.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Dans le cadre d'un projet académique, j'ai développé un jeu vidéo en utilisant le moteur Godot. Fortement inspiré de Vampire Survivor, le jeu prend place dans un monde infini généré procéduralement. Le joueur dispose de plusieurs compétences et statistiques qu'il peut faire évoluer, tandis que les monstres qu'il affronte deviennent de plus en plus coriaces.",
         realm: "Développement de jeu vidéo",
         artifacts: "Godot, GDScript",
         source: ["https://github.com/Hatedero/Contrees_du_lointain"],
@@ -117,93 +120,107 @@ const myQuests = [
         title: "Portfolio",
         status: "Achevé",
         summary: "Un portfolio en ligne pour présenter mes projets et compétences, avec une interface inspirée des RPG.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Ce portfolio a été conçu pour présenter mes projets et compétences de manière originale, en s'inspirant de l'esthétique des RPG. L'interface utilise des éléments visuels rappelant les jeux de rôle, tels que des icônes de compétences, des cartes de projet, et une navigation immersive. Le portfolio est entièrement responsive, offrant une expérience fluide sur tous les appareils. Il a été développé en utilisant HTML, CSS et JavaScript, évitant les frameworks lourds pour un projet simple.",
         realm: "Développement web",
         artifacts: "HTML, CSS, JavaScript",
         source: ["https://github.com/Hatedero/Projects-encyclopedia"],
         nbPeople: 1,
         context: "École",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/portfolio_1.png",
         images: [
+            "./media/portfolio_1.png"
         ]
     },
     {
         title: "CV en ligne",
         status: "Achevé",
         summary: "Un CV en ligne pour présenter mes compétences et expériences, fait en HTML/CSS simple et épuré.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Ce CV en ligne a été conçu pour présenter mes compétences et expériences de manière claire et concise. Il utilise un design simple et épuré, basé sur HTML et CSS, pour offrir une expérience de lecture agréable sur tous les appareils, et me permettre de facilement le modifier.",
         realm: "Développement web",
         artifacts: "HTML, CSS",
         source: [],
         nbPeople: 1,
         context: "Personnel",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/cv_1.png",
         images: [
+            "./media/cv_1.png"
         ]
     },
     {
         title: "Planificateur d'emploi du temps",
         status: "Achevé",
         summary: "Un outil en ligne qui a permis aux professeurs de mon université de planifier les emplois du temps de leurs cours plus facilement, en prenant en compte les disponibilités des salles et des enseignants.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "Cet outil a été développé pour aider les professeurs à planifier leurs emplois du temps de manière plus efficace. Il prend en compte les disponibilités des salles et des enseignants, permettant ainsi de réduire les conflits et d'optimiser l'utilisation des ressources(basé sur la coloration de graphe). Développé sans framework, avec une interface réactive en JS. L'outil permet d'ajouter plusieurs ressources, contraintes, de mofidier des spécificités pour être facilement évolué et utilisé ailleurs.",
         realm: "Développement web",
-        artifacts: "HTML, CSS, JS, SQLite",
+        artifacts: "HTML, CSS, JavaScript, SQLite",
         source: [],
         nbPeople: 3,
         context: "École",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/edt_1.png",
         images: [
+            "./media/edt_1.png",
+            "./media/edt_2.png",
+            "./media/edt_3.png"
         ]
     },
     {
         title: "VRephi",
         status: "Achevé",
         summary: "Une extension de Gephi-lite permettant de visualiser des graphes en réalité virtuelle, pour une meilleure immersion et compréhension des données.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "VRephi est une extension de Gephi-lite permettant de voir les graphes dans un cadre AR/VR. De nombreuses fonctionnalités comme un système de filtre, d'organisation et de drag and drop sont disponibles pour pouvoir les ré organiser comme voulu. Développé avec React et Three.js, il utilise d'autres librairies comme UI Kit et ReactThreeVR pour faciliter le développement de l'interface et de la partie AR/VR. Ce projet a été réalisé dans le cadre d'un projet académique, et a permis d'explorer les possibilités offertes par la réalité virtuelle pour la visualisation de données complexes.",
         realm: "Développement web",
         artifacts: "HTML, CSS, Typescript, WebXR, Three.js, UI-Kit, ",
         source: [],
         nbPeople: 1,
         context: "École",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/vrephi_1.png",
         images: [
+            "./media/vrephi_1.png",
+            "./media/vrephi_2.png",
+            "./media/vrephi_3.png"
         ]
     },
     {
         title: "G.A.S.C",
         status: "Achevé",
         summary: "Une application mobile permettant aux élèves et professeurs de Lyon 1 et Lyon 3 de gérer leurs activités sportives en lien avec l'université.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
+        details: "G.A.S.C est une application mobile conçue pour permettre aux élèves et professeurs des universités de Lyon 1 et Lyon 3 de gérer leurs activités sportives. Elle offre une interface intuitive, ainsi qu'une messagerie en directe pour faciliter la communication. Les professeurs disposent d'un systeme d'appel pour gérer les présences, tandis que les élèves peuvent facilement s'inscrire aux différentes activités proposées et justifier leurs absences. Une bonne partie du projet a été consacrée à l'optimisation de l'expérience utilisateur en modifiant des parties existantes qui ne marchaient pas/peu.",
         realm: "Développement mobile, web",
         artifacts: "Kotlin, KMP, Jetpack Compose, Symfony, Docker",
         source: [],
         nbPeople: 2,
         context: "Professionnel",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/gasc_1.png",
         images: [
+            "./media/gasc_1.png",
+            "./media/gasc_2.png",
+            "./media/gasc_3.png"
         ]
     },
     {
         title: "Troover",
         status: "Achevé",
         summary: "Une application mobile permettant de mettre en relation entreprises et étudiants pour des offres de stage, alternance ou emploi.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
-        realm: "Professionnel",
+        details: "Troover est une application mobile conçue pour relier les entreprises et les étudiants en recherche de stages, d'alternances ou d'emplois. Elle offre une interface intuitive et un système de recherche avancé pour faciliter la découverte des opportunités. Le projet a été développé avec Flutter et Dart, et utilise Springboot pour le backend et Docker pour le déploiement. Parmis ses points forts on peut noter : <br>-une messagerie en direct <br>-un système de planification de rendez vous <br>-une personnalisation du profil très poussée pour pouvoir faciliter au mieux la recherche.",
+        realm: "Développement mobile",
         artifacts: "Flutter, Dart, Springboot, Docker, SQLite",
         source: [],
         nbPeople: 2,
         context: "Professionnel",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/troover_1.png",
         images: [
+            "./media/troover_1.png",
+            "./media/troover_2.png",
+            "./media/troover_3.png"
         ]
     },
     {
         title: "Inhibitus",
         status: "Développement en cours",
         summary: "Un serious game ayant pour but d'aider les professionnels de santé à réentrainer le mécanisme d'inhibition chez les patients souffrants d'addictions.",
-        details: "A clandestine system for dispatching ravens. Each message is encrypted with ancient runes. Once the intended recipient reads the intended scroll, the ink disappears and the parchment turns to ash.",
-        realm: "Professionnel",
-        artifacts: "Unity, C#, Blender",
+        details: "Inhibitus est un projet centré autour d'un serious game, mais composé de 3 modules : <br>-un jeu unity <br>-une application de configuration <br>-un outil web pour analyser et visualiser les parties <br>De par la complexité du projet, il a été repris par plusieurs fois par des groupes de développeurs différents. Mon objectif sur le projet était de le rendre plus accessible aux professionnels de la santé, en facilitant grandement la configuration tout en gardant la même personnalisation.",
+        realm: "Développement de jeu vidéo, développement web",
+        artifacts: "Unity, C#, Express.js, Vue.js, Docker",
         source: [],
         nbPeople: 1,
         context: "Professionnel",
@@ -213,12 +230,29 @@ const myQuests = [
     }
 ];
 
+function getAllSkills() {
+    const skillSet = new Set();
+    myQuests.forEach(quest => {
+        if (quest.artifacts) {
+            quest.artifacts.split(',').forEach(skill => {
+                const trimmed = skill.trim();
+                if (trimmed) skillSet.add(trimmed);
+            });
+        }
+    });
+    return Array.from(skillSet).sort();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById('quest-list');
     const overlay = document.getElementById('focus-overlay');
     const focusData = document.getElementById('focus-data');
     const closeBtn = document.querySelector('.close-btn');
     const searchInput = document.getElementById('project-search');
+
+    // Check if a specific project should be opened from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectTitle = urlParams.get('project');
 
     const renderQuests = (query = '') => {
         container.innerHTML = '';
@@ -283,6 +317,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     searchInput.addEventListener('input', () => renderQuests(searchInput.value));
     renderQuests();
+
+    // If a project title was passed via URL, open it automatically
+    if (projectTitle) {
+        const project = myQuests.find(q => q.title === projectTitle);
+        if (project) {
+            setTimeout(() => showDetails(project), 100);
+        }
+    }
 
     const closeOverlay = () => {
         overlay.style.display = 'none';
