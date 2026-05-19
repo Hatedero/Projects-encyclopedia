@@ -25,8 +25,11 @@ const myQuests = [
         source: ["https://github.com/Hatedero/Warlocks-1.21", "https://github.com/Hatedero/Warlocks-1.20.1"],
         nbPeople: 1,
         context: "Personnel",
-        thumbnail: "./media/dragon_eye_1.svg",
+        thumbnail: "./media/warlocks_3.png",
         images: [
+            "./media/warlocks_1.png",
+            "./media/warlocks_2.png",
+            "./media/warlocks_3.png"
         ]
     },
     {
@@ -39,8 +42,11 @@ const myQuests = [
         source: ["https://github.com/Hatedero/compendium"],
         nbPeople: 1,
         context: "Personnel",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/compendium_3.png",
         images: [
+            "./media/compendium_1.png",
+            "./media/compendium_2.png",
+            "./media/compendium_3.png"
         ]
     },
     {
@@ -53,8 +59,9 @@ const myQuests = [
         source: ["https://github.com/Hatedero/cardracter"],
         nbPeople: 2,
         context: "École",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/cardracter_1.png",
         images: [
+            "./media/cardracter_1.png",
         ]
     },
     {
@@ -98,8 +105,9 @@ const myQuests = [
         source: ["https://github.com/Hatedero/obseadian"],
         nbPeople: 1,
         context: "Personnel",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/obseadian_1.png",
         images: [
+            "./media/obseadian_1.png"
         ]
     },
     {
@@ -112,8 +120,10 @@ const myQuests = [
         source: ["https://github.com/Hatedero/Contrees_du_lointain"],
         nbPeople: 1,
         context: "École",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/cdl_1.png",
         images: [
+            "./media/cdl_1.png",
+            "./media/cdl_2.png",
         ]
     },
     {
@@ -224,8 +234,10 @@ const myQuests = [
         source: [],
         nbPeople: 1,
         context: "Professionnel",
-        thumbnail: "./media/scroll_whispers_1.svg",
+        thumbnail: "./media/inhibitus_1.png",
         images: [
+            "./media/inhibitus_1.png",
+            "./media/inhibitus_2.png",
         ]
     }
 ];
